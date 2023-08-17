@@ -1,0 +1,143 @@
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
+
+	@media(max-width: $desktop) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media(max-width: $tablet) {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+
+
+.item {
+	background: $light_1;
+	box-shadow: 0.1em 0.1em 0.5em 0.1em rgba($color: #000000, $alpha: 0.1);
+	padding: 1.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	justify-content: space-between;
+
+
+	&__head {
+		display: grid;
+		grid-template-columns: 4em 1fr;
+		gap: 0.3em 1em;
+		padding-bottom: 1em;
+		border-bottom: 0.1em solid rgba($color: #000000, $alpha: 0.1);
+
+		img {
+			grid-column: 1/ span 1;
+			grid-row: 1/ span 2;
+			background: $light_3;
+			aspect-ratio: 1/1;
+			align-self: center;
+			border-radius: 50%;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+
+	&__name {
+		font-weight: 600;
+		color: $dark_2;
+	}
+
+	&__job {
+		color: $light_3;
+		font-weight: 600;
+	}
+
+
+	&__body {
+		color: $light_3;
+		font-weight: 600;
+		font-size: 1.1em;
+		overflow-y: auto;
+		max-height: 16em;
+	}
+
+	&__foot {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1em;
+
+		button {
+			border: none;
+			background: transparent;
+			display: flex;
+			align-items: center;
+			gap: 0.6em;
+			font-weight: 600;
+			font-size: 1.2em;
+			color: $light_3;
+			cursor: pointer;
+			padding: 0.2em;
+			border-bottom: 0.1em solid transparent;
+			transition: 0.2s;
+		}
+
+		button[data-btn='delete']:hover {
+			border-color: currentColor;
+			color: $danger;
+		}
+
+		button[data-btn='edit']:hover {
+			border-color: currentColor;
+			color: $decor_1;
+		}
+
+		button[data-btn='delete'] svg {
+			fill: $danger;
+		}
+
+		button[data-btn='edit'] svg {
+			fill: $decor_1;
+		}
+	}
+
+}
+
+
+
+
+.addBtn {
+	background: $gradient_3;
+	color: $light_1;
+	font-weight: 600;
+	font-size: 1.6em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 1em;
+	min-height: 14em;
+	transition: 0.2s;
+	cursor: pointer;
+
+
+
+	&::before {
+		content: '+';
+		font-size: 2em;
+		font-weight: lighter;
+		border: 0.08em solid $light_1;
+		width: 2em;
+		line-height: 1em;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

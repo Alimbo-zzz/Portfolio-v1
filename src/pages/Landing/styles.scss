@@ -1,0 +1,63 @@
+
+// parallax
+
+#wrapper{
+	position: relative;
+	min-width: $min_w;
+}
+
+
+
+#about-me{
+	position: relative;
+	padding: 200px 0;
+}
+
+
+.parallax-fix{
+	position: absolute;
+	left: 0;bottom: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right bottom;
+	pointer-events: none;
+}
+
+
+
+#skills{
+	position: relative;
+
+
+	img[alt='rock and roll']{
+		position: absolute;
+		left: 0; top: 450px;
+		z-index: -1;
+		width: 500px;
+		object-fit: contain;
+		object-position: center;
+		user-select: none;
+		pointer-events: none;
+		filter: brightness(90%);
+		transform: translateX(-20%);
+
+		@media (max-width: $tablet) {
+			top: auto;
+			bottom: 50px;
+			left: 50%;
+			width: 300px;
+			transform: translateX(-50%);
+		}
+
+		@media (max-width: $phone) {
+			top: auto;
+			bottom: 50px;
+			left: 50%;
+			width: 250px;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+

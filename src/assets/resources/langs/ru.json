@@ -1,0 +1,104 @@
+{
+	"username": "Александр Калайда",
+	"navigation": {
+		"main": "Главная",
+		"about-me": "Обо мне",
+		"portfolio": "Портфолио",
+		"skills": "Навыки",
+		"reviews": "Отзывы",
+		"connection": "Связаться"
+	},
+	"secAboutMe": {
+		"info": [
+			"Проживаю",
+			"Возраст",
+			"Родился"
+		],
+		"hi": "Привет, меня зовут",
+		"age": "лет"
+	},
+	"secSkills": {
+		"title": "Чем я могу быть вам полезен?",
+		"text": "Если вам необходимо построить или усовершенствовать процессы разработки, то я буду вам очень кстати)"
+	},
+	"secPortfolio": {
+		"title": "Портфолио",
+		"portfolio": [
+			{
+				"img": "pandemonium.jpeg",
+				"tags": [
+					"tag_1",
+					"tag_2"
+				],
+				"title": "Pandemonium",
+				"description": "desk",
+				"links": [
+					{
+						"url": "https://pandemoniumw.ru",
+						"value": "Посмотреть сайт"
+					}
+				]
+			},
+			{
+				"img": "skyway.jpeg",
+				"tags": [
+					"adndroid"
+				],
+				"title": "Pandemonium",
+				"description": "desk",
+				"links": []
+			},
+			{
+				"img": "cryptosquad.jpeg",
+				"tags": [],
+				"title": "CryptoSquad",
+				"description": "desk",
+				"links": []
+			},
+			{
+				"img": "node2earn.png",
+				"tags": [
+					"tag_1",
+					"tag_2"
+				],
+				"title": "Node2earn",
+				"description": "desk",
+				"links": []
+			}
+		]
+	},
+	"secReviews": {
+		"title": "Что обо мне говорят"
+	},
+	"secConnection": {
+		"title": "Связаться со мной",
+		"form": {
+			"name": {
+				"label": "name",
+				"placeholder": "Введите ваше имя",
+				"icon": "Avatar"
+			},
+			"mail": {
+				"label": "mail",
+				"placeholder": "Введите вашу почту",
+				"icon": "Envelope"
+			},
+			"message": {
+				"label": "message",
+				"placeholder": "Сообщение к письму",
+				"icon": "Chat"
+			}
+		}
+	},
+	"footer": {
+		"quote": {
+			"author": "Самуэль Джексон",
+			"value": "Если жизнь повернулась к тебе задом - засади ей!"
+		},
+		"text": "Не имей 100 рублей, а имей 100 друзей со ста рублями в кармане. \"Калайда Александр\""
+	},
+	"btns": {
+		"skroll": "Скролл",
+		"send": "Отправить"
+	}
+}

@@ -1,0 +1,43 @@
+
+
+
+.buttons{
+	display: flex;
+	gap: 0.5em;
+
+	button{
+		font-size: 1.2em;
+	}
+}
+
+
+
+.skill{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+
+	&[data-active='false']{
+		input{pointer-events: none;}
+	}
+}
+
+
+
+
+
+
+// forms edit mode
+
+
+.skill{
+	&[data-active='false']{
+		input[type='text']{
+			box-shadow: none;
+		}
+	}
+
+
+}
+

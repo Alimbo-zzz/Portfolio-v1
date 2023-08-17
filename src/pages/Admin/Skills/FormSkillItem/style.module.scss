@@ -1,0 +1,31 @@
+.add {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+
+
+	[data-btn='icon-add'] {
+		aspect-ratio: 1/1;
+		height: 1.4em;
+		border-radius: 50%;
+		border: none;
+		font-size: 2em;
+		color: $light_1;
+		background: $gradient_1;
+		cursor: pointer;
+		transition: 0.2s;
+		position: relative;
+
+		&::before {
+			content: '+';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+}

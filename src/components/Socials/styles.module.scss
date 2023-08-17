@@ -1,0 +1,43 @@
+.list{
+	display: flex;
+	gap: 1.5em;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.item{
+
+}
+
+
+.link{	
+	user-select: none;
+	cursor: pointer;
+	display: block;
+	opacity: 0.5;
+	transition: 0.2s;
+	padding: 5px 0px;
+
+	&:hover{
+		opacity: 1;
+	}
+}
+
+
+.icon{
+	color: $light_1;
+	font-size: 20px;
+}
+
+
+
+.list[data-style="circle"] .link{
+	border:1px solid $light_1;
+	width: 3em;
+	border-radius: 50%; 
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

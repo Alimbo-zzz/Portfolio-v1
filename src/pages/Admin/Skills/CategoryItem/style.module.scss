@@ -1,0 +1,42 @@
+.category {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2em;
+	position: relative;
+
+	&[data-active='false'] {
+		input[type='text'] {
+			pointer-events: none;
+			border-color: transparent;
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -0.5em;
+		transform: translateX(-50%);
+		width: 105%;
+		height: 0.1em;
+		background: $light_3;
+		opacity: 0.3;
+	}
+
+	input[type='text'] {
+		box-shadow: none;
+		border-bottom: 0.15em solid $light_3;
+		padding: 0.4em;
+	}
+
+}
+
+.buttons {
+	display: flex;
+	gap: 0.5em;
+
+	button {
+		font-size: 1.2em;
+	}
+}

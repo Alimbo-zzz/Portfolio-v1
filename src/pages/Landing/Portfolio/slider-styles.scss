@@ -1,0 +1,19 @@
+[data-slider="pagination"]{
+	.swiper-slide{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+
+	.swiper-slide-thumb-active{
+		border:2px solid $decor_1;
+		opacity: 1;
+	}
+
+
+	&[data-slides="3"], &[data-slides="2"], &[data-slides="1"]{
+		.swiper-wrapper{
+			justify-content: flex-end;
+		}
+	}
+
+}

@@ -1,0 +1,99 @@
+.wrap {
+	input[type='file'] {
+		display: none;
+	}
+
+	input[type='text'],
+	textarea {
+		@include inputShadow();
+	}
+
+
+	[data-btn='icon'] {
+		border: 0.1em solid transparent;
+		transition: 0.2s;
+		width: 2em;
+		background: none;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		cursor: pointer;
+		color: $light_3;
+
+		&:hover {
+			border-color: currentColor;
+
+			&[type='edit'] {
+				color: $success;
+			}
+
+			&[type='delete'] {
+				color: $danger;
+			}
+
+			&[type='reset'] {
+				color: $danger;
+			}
+
+			&[type='submit'] {
+				color: $decor_1;
+			}
+		}
+	}
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2em;
+}
+
+
+.btnAdd {
+	background: $gradient_3;
+	color: $light_1;
+	border: none;
+	font-weight: 500;
+	font-size: 1.2em;
+	padding: 0.4em 0.8em;
+	cursor: pointer;
+	border-radius: 0.5em;
+}
+
+
+.list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2em;
+
+	@media (max-width: $desktop) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+.item {
+	background: $light_1;
+	padding: 1.2em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em 0.6em 0.1em rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1em;
+	height: 400px;
+
+	&__skills {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		height: 100%;
+		margin-top: 0.5em;
+		overflow-y: auto;
+	}
+
+}

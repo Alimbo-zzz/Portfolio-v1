@@ -1,0 +1,104 @@
+{
+	"username": "Kalaida Alexander",
+	"navigation": {
+		"main": "Main",
+		"about-me": "About me",
+		"portfolio": "Portfolio",
+		"skills": "Skills",
+		"reviews": "Reviews",
+		"connection": "Connection"
+	},
+	"secAboutMe": {
+		"info": [
+			"I live",
+			"Age",
+			"Born on"
+		],
+		"hi": "Hello, my name is",
+		"age": "years old"
+	},
+	"secSkills": {
+		"title": "How can I help you?",
+		"text": "If you need to build or improve development processes, then I will be very helpful to you."
+	},
+	"secPortfolio": {
+		"title": "Portfolio",
+		"portfolio": [
+			{
+				"img": "pandemonium.jpeg",
+				"tags": [
+					"tag_1",
+					"tag_2"
+				],
+				"title": "Pandemonium",
+				"description": "desk",
+				"links": [
+					{
+						"url": "https://pandemoniumw.com",
+						"value": "Посмотреть сайт"
+					}
+				]
+			},
+			{
+				"img": "skyway.jpeg",
+				"tags": [
+					"adndroid"
+				],
+				"title": "Pandemonium",
+				"description": "desk",
+				"links": []
+			},
+			{
+				"img": "cryptosquad.jpeg",
+				"tags": [],
+				"title": "CryptoSquad",
+				"description": "desk",
+				"links": []
+			},
+			{
+				"img": "node2earn.jpeg",
+				"tags": [
+					"tag_1",
+					"tag_2"
+				],
+				"title": "Node2earn",
+				"description": "desk",
+				"links": []
+			}
+		]
+	},
+	"secReviews": {
+		"title": "What do they say about me"
+	},
+	"secConnection": {
+		"title": "Contact with me",
+		"form": {
+			"name": {
+				"label": "name",
+				"placeholder": "Enter your name",
+				"icon": "Avatar"
+			},
+			"mail": {
+				"label": "mail",
+				"placeholder": "Enter your mail",
+				"icon": "Envelope"
+			},
+			"message": {
+				"label": "message",
+				"placeholder": "Message to the letter",
+				"icon": "Chat"
+			}
+		}
+	},
+	"footer": {
+		"quote": {
+			"author": "Samuel L. Jackson",
+			"value": "When life gives you shit, you make kool-aid!"
+		},
+		"text": "Don't have 100 rubles, but have 100 friends with a hundred rubles in their pockets. \"Kalaida Alexander\""
+	},
+	"btns": {
+		"skroll": "Skroll",
+		"send": "Submit"
+	}
+}

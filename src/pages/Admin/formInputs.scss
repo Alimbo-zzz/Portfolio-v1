@@ -1,0 +1,43 @@
+
+
+.form-placeholder{
+	font-weight: 600;
+	color: $dark_1;
+	margin-bottom: 0.5em;
+	font-size: 1.2em;
+	justify-content: space-around;
+}
+
+.admin-form-btn{
+	display: inline-block;
+	background: $gradient_3;
+	padding: 0.8em 1.6em;
+	border: none;
+	border-radius: 100em;
+	text-transform: uppercase;
+	color: $light_1;
+	font-weight: 600;
+	cursor: pointer;
+}
+.admin-form-reset{
+	background: none;
+	border: none;
+	color: $decor_1;
+	font-weight: 600;
+	padding: 0.3em;
+	cursor: pointer;
+	transition: 0.2s;
+	border-bottom: 0.15em solid transparent;
+
+	&:hover {
+		border-color: currentColor;
+	}
+}
+
+.admin-form-placeholder{
+	color: $light_3;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+ 

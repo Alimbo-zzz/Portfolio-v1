@@ -1,0 +1,301 @@
+.wrap {
+	@include section-padding();
+	background: #F8F8F8;
+	overflow: hidden;
+
+	h3[data-name="title"] {
+		color: $dark_2;
+		margin-bottom: 2em;
+	}
+
+}
+
+
+
+
+
+.sliderArrow {
+	&[data-arrow='prev'] svg {
+		transform: scaleX(-1);
+	}
+}
+
+
+
+.slider {
+	display: grid;
+	gap: 8em;
+	width: 100%;
+	aspect-ratio: 2.8/1;
+
+	grid-template-columns: 1fr 400px;
+
+	@media (max-width: $laptop) {
+		aspect-ratio: auto;
+		gap: 2em;
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	&Preview {
+		position: relative;
+		width: 100%;
+		z-index: 10;
+
+		@media (max-width: $laptop) {
+			aspect-ratio: 2/1;
+			width: 90%;
+		}
+	}
+
+	&Info {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 10;
+
+		@media (max-width: $laptop) {
+			// aspect-ratio: 1/1;
+			height: auto;
+			text-align: center;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+	}
+
+}
+
+.sliderSlides {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+
+	&[data-slider='pagination'] {
+		@media (max-width: $phone) {
+			display: none;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		user-select: none;
+		pointer-events: none;
+	}
+
+}
+
+
+
+
+
+.sliderPagination {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	bottom: 8%;
+	height: 5em;
+	width: 70%;
+
+	@media (max-width: $phone) {
+		bottom: 0;
+		height: 3em;
+	}
+}
+
+.sliderControllers {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background: $dark_2;
+	color: $light_1;
+	display: flex;
+	flex-direction: column;
+	aspect-ratio: 1/2;
+	transform: translateX(100%);
+	z-index: 5;
+
+	@media (max-width: $phone) {
+		transform: translateX(0);
+		flex-direction: row-reverse;
+		aspect-ratio: 2/1;
+	}
+}
+
+.sliderArrow {
+	background: inherit;
+	border: none;
+	flex: 1;
+	color: $light_2;
+	cursor: pointer;
+	transition: 0.2s;
+
+	&:disabled {
+		pointer-events: none;
+		color: #475469;
+	}
+
+	&:hover {
+		filter: brightness(120%);
+	}
+
+	&:active {
+		&[data-arrow='prev'] svg {
+			transition: 0.1s;
+			transform: translateX(-40%) scaleX(-1);
+		}
+
+		&[data-arrow='next'] svg {
+			transition: 0.1s;
+			transform: translateX(40%);
+		}
+	}
+}
+
+
+
+.sliderIndex {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 22em;
+	font-weight: 800;
+	line-height: 0.8em;
+	color: #EEEEEE;
+	user-select: none;
+	pointer-events: none;
+	z-index: -10;
+	transform: translate(70%, 20%);
+}
+
+
+
+
+.sliderInfo {
+
+	*::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	&__cont {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		max-height: 100%;
+		min-height: 70%;
+		justify-content: space-between;
+
+		@media (max-width: $laptop) {
+			padding: 1em;
+			position: relative;
+			max-height: 500px;
+			gap: 1.5em;
+		}
+
+	}
+
+	[data-name='title'] {
+		color: $dark_2;
+	}
+
+	[data-name='text'] {
+		font-weight: 600;
+		font-size: 0.8em;
+		overflow-y: auto;
+		max-height: 200px;
+		padding-right: 0.2em;
+
+		&[data-no-links="true"] {
+			max-height: none;
+		}
+	}
+
+
+
+	&__tags {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		overflow-y: hidden;
+		overflow-x: auto;
+		padding: 0.5em 0;
+		padding-bottom: 0.8em;
+		min-height: 4em;
+
+		@media (max-width: $laptop) {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__tag {
+		background: #EBEEF3;
+		color: $light_3;
+		border-radius: 10em;
+		font-weight: 600;
+		padding: 0.5em 1em;
+		display: inline-block;
+
+	}
+
+
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+		overflow-y: auto;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 0.5em;
+
+		@media (max-width: $laptop) {
+			justify-content: space-around;
+		}
+	}
+
+	&__link {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		font-weight: 700;
+		color: $decor_1;
+		transition: 0.2s;
+		position: relative;
+		padding-bottom: 0.1em;
+
+		svg {
+			font-size: 1.2em;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 0.1em;
+			width: 100%;
+			background: currentColor;
+			opacity: 0;
+			transition: inherit;
+		}
+
+
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+
+}

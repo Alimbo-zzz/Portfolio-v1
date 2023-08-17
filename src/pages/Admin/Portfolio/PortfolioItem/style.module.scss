@@ -1,0 +1,126 @@
+.wrap {
+	box-shadow: 0.1em 0.1em 0.5em 0.1em rgba($color: #000000, $alpha: 0.1);
+	max-width: 500px;
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.preview {
+	position: relative;
+	aspect-ratio: 4/3;
+
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		object-position: center;
+		user-select: none;
+		pointer-events: none;
+		background-color: $light_3;
+	}
+
+	&__tags {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 0.5em;
+		padding: 1em;
+	}
+}
+
+
+.content {
+	padding: 0em 2em;
+	padding-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 1.6em;
+	justify-content: space-between;
+
+	&__title {
+		font-size: 1.2em;
+		font-weight: bold;
+		color: $dark_2;
+	}
+
+	&__description {
+		font-weight: 600;
+		color: $light_3;
+		max-height: 10em;
+		height: 100%;
+		overflow: auto;
+		border-bottom: 0.1em solid rgba($color: #000000, $alpha: 0.05);
+		border-right: 0.1em solid rgba($color: #000000, $alpha: 0.05);
+		padding-bottom: 0.5em;
+		padding-right: 0.3em;
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1em;
+		max-height: 10em;
+
+		a {
+			font-weight: 600;
+			color: $decor_2;
+		}
+	}
+
+
+	&__btns {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2em;
+
+		button {
+			font-weight: bold;
+			color: $light_3;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			transition: 0.2s;
+			padding: 0.3em;
+
+			&[data-btn='edit']:hover {
+				color: $success;
+			}
+
+			&[data-btn='delete']:hover {
+				color: $danger;
+			}
+		}
+	}
+}
+
+
+
+
+
+.tag {
+	background-color: $light_2;
+	color: $light_3;
+	font-weight: bold;
+	box-shadow: 0.1em 0.1em 0.1em 0.1em rgba($color: #000000, $alpha: 0.1);
+	padding: 0.5em 1em;
+	border-radius: 10em;
+	font-size: 0.8em;
+}

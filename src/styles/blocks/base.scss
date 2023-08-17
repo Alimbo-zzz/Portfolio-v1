@@ -1,0 +1,55 @@
+*{
+	font-family: 'Open Sans';
+  scroll-behavior: smooth;
+	// scroll-margin-top: 100px;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+.title{
+	font-weight: 700;
+	color: $light_1;
+
+	
+	@media(max-width: $tablet){
+		text-align: center;
+	}
+}
+
+.text{
+	color: $light_3;
+	font-weight: 400;
+}
+
+
+.btn{
+	width: 300px;
+	border-radius: 100em;
+	border: none;
+	background: $gradient_3;
+	color: $light_2;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 1.5em;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: 0.2s;
+
+	&:active{
+		transform: scale(0.9);
+	}
+}
+
+
+
+.admin-block-title{
+	font-size: 2em;
+	color: $dark_2;
+	font-weight: 600;
+	margin: 1em 0 ;
+
+	&::before{content: 'Блок «';}
+	&::after{content: '»';}
+}

@@ -1,0 +1,80 @@
+.wrap{
+	position: relative;
+	z-index: 10;
+	@include section-padding;
+}
+
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	max-width: 1000px;
+	margin: 0 auto;
+	gap: 4em 8em;
+
+	@media (max-width: $laptop) {	gap: 3em;}
+	@media (max-width: $tablet) {	
+		grid-template-columns: 1fr;
+		justify-items: center;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+
+
+.biography{
+	display: flex;
+	flex-direction: column;
+	gap:0.5em;
+
+	h3{margin-bottom: 0.4em;}
+}
+
+.avatar{
+	width: 180px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	overflow: hidden;
+	align-self: end;
+	justify-self: end;
+
+	@media (max-width: $tablet) {	
+		justify-self: center;
+	}
+
+
+	img{
+		width: 100%; height: 100%;
+		object-fit: cover;
+		object-position: center;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+
+
+
+.info{
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	grid-row: 2;
+	grid-column: 1;
+
+	&__box{
+		display: flex;
+		justify-content: space-between;
+		gap:1em;
+		align-items: center;
+	}
+
+	&__key{
+		color: $dark_1;
+	}
+
+	&__value{
+		color: $light_2;
+	}
+}

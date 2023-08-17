@@ -1,0 +1,19 @@
+
+*::-webkit-scrollbar-track{
+	background-color: transparent;
+}
+
+
+*::-webkit-scrollbar
+{
+	width: 10px;
+	height: 6px;
+	background-color: $light_2;
+	aspect-ratio: 1/1;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: $decor_1;
+	
+}

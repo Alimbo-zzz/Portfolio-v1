@@ -1,0 +1,47 @@
+
+
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	flex-wrap: wrap;
+	max-width: 700px;
+	width: 100%;
+}
+
+
+.link{
+	color: $light_1;
+	user-select: none;
+	cursor: pointer;
+	transition: 0.2s;
+	padding: 5px;
+	position: relative;
+	white-space: nowrap;
+
+
+	&::before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		width: calc(100% - 10px); height: 1px;
+		background: currentColor;
+		transition: inherit;
+		// 
+		transform: translateX(-50%) scale(0);
+		opacity: 0;
+	}
+
+
+	&:hover::before{		
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+
+
+}
+
+

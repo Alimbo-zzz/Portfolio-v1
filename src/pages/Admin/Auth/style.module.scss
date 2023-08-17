@@ -1,0 +1,98 @@
+.form{
+	max-width: 500px;
+	width: 100%;
+	background: $light_1;
+	padding: 3em;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+	align-items: center;
+	box-shadow: 0 0 0.5em 0.1em rgba(0,0,0,0.2);
+}
+
+
+.title{
+	font-weight: 600;
+	color: $dark_2;
+	text-align: center;
+	font-size: 2.2em;
+}
+
+.remove{
+	position: absolute;
+	right: 2em; top: 1em;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: $dark_2;
+}
+
+
+
+.btn{
+	width: 100%;
+	max-width: 16em;
+	padding: 1em;
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0.2em;
+	border-bottom-right-radius: 2em;
+	border-top-left-radius: 2em;
+	color: $light_1;
+	background: $gradient_1;
+	cursor: pointer;
+	transition: 0.2s;
+	
+
+	&:active{
+		transform: scale(0.95);
+	}
+}
+
+
+
+
+
+
+.box{
+	display: grid;
+	grid-template-columns: min-content max-content;
+	gap: 0.5em;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	max-width: 20em;
+
+
+	svg{
+		font-size: 2em;
+		color: $light_3;
+	}
+
+	input{
+		border: none;
+		display: block;
+		width: 100%;
+		grid-column: 2/max;
+	}
+	
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: -1em; left: 0;
+		width: 100%; height: 0.1em;
+		background: $light_3;
+	}
+	
+}
+
+
+.placeholder{
+	grid-column: 2/max;
+	width: 100%;
+	font-weight: 600;
+	color: $light_3;
+}

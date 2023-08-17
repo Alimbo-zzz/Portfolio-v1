@@ -1,0 +1,26 @@
+@mixin section-padding{
+	padding: 100px 0;
+	@media (max-width: $laptop) {
+		padding: 80px 0;
+	}
+}
+
+
+
+@mixin inputShadow{
+	display: block;
+	width: 100%;
+	padding: 0.5em 1em;
+	background: $light_1;
+	border: none;
+	box-shadow: 0.1em 0.1em 0.2em 0.1em rgba(0, 0, 0, 0.1);
+	outline: none;
+	transition: 0.2s;
+	color: $dark_2;
+	border-radius: 0.2em;
+	border: 1px solid transparent;
+
+	&:focus {
+		border-color: $decor_1;
+	}
+}

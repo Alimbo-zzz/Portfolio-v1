@@ -1,0 +1,75 @@
+
+.selectLanguage{
+	user-select: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 6em;
+	position: relative;
+	z-index: 100;
+	color: $dark_3;
+
+	&__preview{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1em;
+		img{ width: 2em; }
+		cursor: pointer;
+		padding: 0.5em;
+		border-radius: 0.5em;
+		background: $light_1;
+		box-shadow: 0.1em 0.1em 0.2em 0.1em rgba(0,0,0,0.2);
+	}
+
+
+	&__btns{
+		position: absolute;
+		left: 0;bottom: -0.2em;
+		width: 100%;
+		transform: translateY(100%);
+		transition: 0.3s;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.5em;
+		background: $light_1;
+		overflow: hidden;
+		box-shadow: 0 0 0.5em 0.1em rgba(0,0,0,0.2);	
+
+		opacity: 0;
+		pointer-events: none;
+	}
+
+
+	&[data-open='true']{
+		.selectLanguage__btns{
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+
+
+.languageBtn{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 600;
+
+	img{
+		width: 2em;
+	}
+
+	&[data-active='true']{
+		pointer-events: none;
+		background: $decor_1;
+		color: $light_1;
+	}
+}
+
+
+
+

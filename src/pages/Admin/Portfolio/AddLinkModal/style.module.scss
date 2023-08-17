@@ -1,0 +1,58 @@
+.wrap{
+	position: fixed;
+	left: 0; top: 0;
+	width: 100vw; height: 100vh;	
+	background: rgba($color: #000000, $alpha: 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	z-index: 10000;
+	transition: 0.3s;
+
+	opacity: 0;
+	pointer-events: none;
+	user-select: none;
+
+	&[data-active='true']{
+		opacity: 1;
+		pointer-events: auto;
+		user-select: auto;
+	}
+
+}
+
+.form{
+	background: $light_1;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+	border-radius: 0.5em;
+	max-width: 400px;
+	width: 100%;
+
+	&__head{
+		display: flex;
+	}
+
+	input{
+		display: block;
+		width: 100%;
+		padding: 0.5em;
+		border:1px solid  rgba($color: #000000, $alpha: 0.2);
+		border-radius: 0.5em;
+		color: $dark_2;
+	}
+
+
+	&__btns{
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		gap: 2em;
+
+		[type='reset']{font-size: 1.2em;}
+
+	}
+}
