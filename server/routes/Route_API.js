@@ -44,9 +44,9 @@ router.put(`/v1/api/skills/edit/skill`, checkAuth, VAL.skillEdit, CTRL_skills.ed
 router.get(`/v1/api/mail/send`, CTRL_sendMail.send)
 router.get(`/test`, (req, res) => {
 	try {
-		res.status(200).json({ message: 'success' })
+		return res.status(200).json({ message: 'success' })
 	} catch (error) {
-		res.status(400).json({ message: 'error' })
+		return res.status(400).json({ message: 'error' })
 	}
 })
 
