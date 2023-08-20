@@ -3,13 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
-    "start": "node server",
-    "serve": "vite --open --host",
-    "dev": "concurrently \"yarn start\" \"yarn serve\"",
+    "start": "vite --open --host",
+    "serve": "node server",
     "build": "vite build",
     "preview": "vite preview"
   },
